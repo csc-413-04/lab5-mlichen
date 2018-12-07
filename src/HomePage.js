@@ -35,9 +35,9 @@ class HomePage extends Component {
      sendSomeData(){
         axios({
                 method: 'POST',
-                url: '/api/sendMessage',
+                url: '/api/sendmessage',
                 data: {
-                    message: this.state.messageValue
+                    message: this.state.messageValue,
                 }
             })
             .then((res) => {
@@ -72,7 +72,7 @@ class HomePage extends Component {
                     })
                 }
                 </div>
-                <input value={this.state.messageValue} onchange={this.updateMessage}/>
+                <input value={this.state.messageValue} onChange={this.updateMessage}/>
                 <button onClick={this.sendSomeData}>Send some post data</button>
             </div>
         );
